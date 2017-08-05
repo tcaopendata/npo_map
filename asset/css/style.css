@@ -50,6 +50,7 @@ h1 {
 
     cursor: pointer;
     /*padding: 0.1em 0.5em 0.1em 0.5em;*/
+    transition: .5s;
 }
 
 .panel-default .panel-heading {
