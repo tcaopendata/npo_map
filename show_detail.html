@@ -72,7 +72,7 @@
                 $("table").last().append(addr);
 
                 $.ajax({
-                    url: "http://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + $.orgID,
+                    url: "https://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + $.orgID,
                     type: "GET",
                     dataType: "json",
                     success: function(json) {
@@ -188,7 +188,7 @@
 
         console.log(org_id + "," + name + "," + content + "," + star);
         $.ajax({
-            url: "http://www.bringoo.com.tw/npo_map/add_star.php",
+            url: "https://www.bringoo.com.tw/npo_map/add_star.php",
             type: "get",
             data: {
                 org_id: org_id,
