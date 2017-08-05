@@ -5,6 +5,12 @@
 		<title>Show</title>
 	</head>
 	<body>
-		
+		<div id="out"></div>
+
+		<script type="text/javascript">
+			var json = require('./npo_list.json');
+			console.log(json);
+			document.getElementById('out').innerHTML = json;
+		</script>
 	</body>
 </html>
