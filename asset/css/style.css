@@ -1,0 +1,72 @@
+h1 {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .brand-pills>li>a {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    li.brand-nav.active a:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 9px solid #428bca;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        left: 100%;
+        z-index: 2;
+    }
+
+    .green li.brand-nav.active a:after {
+        border-left: 9px solid #5cb85c;
+    }
+}
+
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover
+ {
+    background-color: #428bca;
+}
+
+.nav-pills.green>li.active>a,
+.nav-pills.green>li.active>a:focus,
+.nav-pills.green>li.active>a:hover
+ {
+    background-color: #5cb85c;
+}
+
+
+.panel-default {
+
+    cursor: pointer;
+    /*padding: 0.1em 0.5em 0.1em 0.5em;*/
+}
+
+.panel-default .panel-heading {
+    background-color: transparent;
+}
+
+.panel-default:hover {
+    box-shadow: 1px 1px 0px 1px #888888;
+    /*padding: 0.2em 0.4em 0 0.6em;*/
+    transition: .5s;
+}
+
+.nav.nav-pills.brand-pills.nav-stacked {
+    margin-bottom: 20px;
+}
+
+.tab-hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
