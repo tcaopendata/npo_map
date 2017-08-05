@@ -1,1 +1,264 @@
-{"list": [{"choose": 1, "desc": "\r\u672c\u6703\u70ba\u4f9d\u6cd5\u8a2d\u7acb\uff0c\u975e\u4ee5\u71df\u5229\u70ba\u76ee\u7684\u4e4b\u793e\u6703\u5718\u9ad4\uff1b\u4ee5\u5ba3\u63da\u53ca\u4fdd\u969c\u8001\u4eba\u4e4b\u6b0a\u76ca\u70ba\u4e3b\u8981\u5b97\u65e8\u3002\r              ", "name": "\u793e\u5718\u6cd5\u4eba\u4e2d\u83ef\u6c11\u570b\u8001\u4eba\u798f\u5229\u95dc\u61f7\u5354\u6703", "tags": ["\u8001\u4eba\u798f\u5229"], "id": "6981"}, {"choose": 1, "desc": "\r\u4ee5\u5168\u65b9\u4f4d\u670d\u52d9\u70ba\u984f\u640d\u53ca\u71d2\u50b7\u8005\u91cd\u5efa\u74b0\u5883\u3001\u8eab\u9ad4\u5fc3\u7406\u8207\u793e\u6703\u529f\u80fd\uff0c\u7dad\u8b77\u5176\u5c0a\u56b4\u8207\u4eba\u6b0a\u3002\r              ", "name": "\u8ca1\u5718\u6cd5\u4eba\u967d\u5149\u793e\u6703\u798f\u5229\u57fa\u91d1\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "4"}, {"choose": 1, "desc": "\r\u7d42\u751f\u6559\u80b2\u3001\u7d42\u751f\u7167\u9867\u2027\u76ee\u6a19\uff08Goal\uff09 \u8b93\u6240\u6709\u559c\u61a8\u5152 \u751f\u6d3b\u5728\u793e\u5340\u6709\u670b\u53cb\uff1b\u6709\u5de5\u4f5c\u6709\u6eab\u6696\u7684\u5bb6\uff5e\u9858\u666f\uff08Vision\uff09 \u670d\u52d9\u5168\u53f0\u7063\u4e4b\u559c\u61a8\u5152\uff5e \u6539\u8b8a\u793e\u6703\u5927\u773e\u5c0d\u5fc3\u667a\u969c\u7919\u8005\u4e4b", "name": "\u8ca1\u5718\u6cd5\u4eba\u559c\u61a8\u5152\u793e\u6703\u798f\u5229\u57fa\u91d1\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "1549"}, {"choose": 1, "desc": "\r\u806f\u5408\u773e\u4eba\u7528\u611b\u5fc3\u95dc\u61f7\u8001\u4eba\uff0c\u5171\u540c\u63a8\u52d5\u793e\u5340\u7167\u9867\u3001\u5f18\u63da\u5b5d\u9053\u3001\u4e0d\u8001\u5922\u60f3\r              ", "name": "\u8ca1\u5718\u6cd5\u4eba\u5f18\u9053\u8001\u4eba\u798f\u5229\u57fa\u91d1\u6703", "tags": ["\u8001\u4eba\u798f\u5229"], "id": "4898"}, {"choose": 1, "desc": "\r21\u4e16\u7d00\u662f\u7537\u5973\u9808\u8aa0\u5fc3\u5408\u4f5c\u7684\u6642\u4ee3\uff0c\u4e86\u89e3\u5f7c\u6b64\u662f\u70ba\u4e86\u4f7f\u5c0d\u65b9\u66f4\u52a0\u5b8c\u7f8e\u800c\u5b58\u5728\u3002\u4eca\u65e5\u793e\u6703\u554f\u984c\u4e0d\u55ae\u4ee5\u6b0a\u529b\u6216\u653f\u6cbb\u80fd\u89e3\u6c7a\uff0c\u9084\u9700\u7537\u5973\u96d9\u65b9\u4ee5\u8abf\u548c\u3001\u6190\u6064\u3001\u611b\u3001\u670d\u52d9\u548c\u72a7\u7272\u7684\u7cbe\u795e\u4e00\u8d77\u52aa\u529b", "name": "\u4e16\u754c\u548c\u5e73\u5a66\u5973\u6703\u53f0\u7063\u7e3d\u6703", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "4973"}, {"choose": 1, "desc": "\r\u4e00\u3001\u95dc\u61f7\u764c\u75c7\u75c5\u60a3\uff0c\u9f13\u821e\u5176\u596e\u9b25\u610f\u5fd7\uff0c\u53ca\u63d0\u4f9b\u7642\u8b77\u5eb7\u5fa9\u4e4b\u8f14\u5c0e\u3002\u4e8c\u3001\u63d0\u4f9b\u793e\u6703\u5927\u773e\u764c\u75c7\u5eb7\u5fa9\u8cc7\u8a0a\uff0c\u9810\u9632\u764c\u75c7\u767c\u751f\uff0c\u4fc3\u9032\u5927\u773e\u8eab\u5fc3\u5065\u5eb7\u3002", "name": "\u4e2d\u83ef\u570b\u969b\u764c\u75c5\u5eb7\u5fa9\u5354\u6703", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "1517"}, {"choose": 1, "desc": "\r\u63a8\u5ee3\u6b63\u78ba\u7684\u764c\u75c7\u9632\u6cbb\u89c0\u5ff5\uff0c\u5ba3\u5c0e\u6b63\u898f\u764c\u75c7\u6cbb\u7642\u3002\u5354\u52a9\u764c\u75c7\u75c5\u4eba\u53ca\u5bb6\u5c6c\u5766\u7136\u9069\u61c9\u75be\u75c5\uff0c\u7dad\u8b77\u826f\u597d\u751f\u6d3b\u54c1\u8cea\u3002", "name": "\u8ca1\u5718\u6cd5\u4eba\u764c\u75c7\u5e0c\u671b\u57fa\u91d1\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "3125"}, {"choose": 1, "desc": "\r\u52f5\u99a8\u672c\u8457\u57fa\u7763\u7cbe\u795e\uff0c\u4ee5\u8ffd\u6c42\u516c\u7fa9\u8207\u611b\u7684\u6c7a\u5fc3\u548c\u52c7\u6c23\uff0c\u9810\u9632\u53ca\u6d88\u5f2d\u6027\u4fb5\u5bb3\u3001\u6027\u525d\u524a\u53ca\u5bb6\u5ead\u66b4\u529b\u5c0d\u5a66\u5973\u8207\u5152\u5c11\u7684\u50b7\u5bb3\uff0c\u4e26\u81f4\u529b\u65bc\u793e\u6703\u6539\u9020\uff0c\u5275\u9020\u5c0d\u5a66\u5973\u53ca\u5152\u5c11\u7684\u53cb\u5584\u74b0\u5883\u3002\r     ", "name": "\u8ca1\u5718\u6cd5\u4eba\u52f5\u99a8\u793e\u6703\u798f\u5229\u4e8b\u696d\u57fa\u91d1\u6703", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "8"}, {"choose": 1, "desc": "\r\u4e00\u3001\u50b3\u64ad\u6d77\u6d0b\u6027\u8ca7\u8840\u75c7\u77e5\u8b58\uff0c\u4ee5\u671f\u6709\u6548\u9632\u6b62\u6d77\u6d0b\u6027\u8ca7\u8840\u75c7\u4e4b\u767c\u751f\u3002\u4e8c\u3001\u8209\u8fa6\u6d77\u6d0b\u6027\u8ca7\u8840\u75c7\u75c5\u60a3\u3001\u5bb6\u5c6c\u53ca\u95dc\u61f7\u4eba\u58eb\u806f\u8abc\u6d3b\u52d5\uff0c\u4e26\u85c9\u4ee5\u4ea4\u63db\u5404\u7a2e \u9632\u6cbb\u5fc3\u5f97\u3002\u4e09\u3001\u5354\u52a9\u6d77\u6d0b\u6027\u8ca7\u8840\u75c5\u60a3\u6cbb", "name": "\u53f0\u7063\u6d77\u6d0b\u6027\u8ca7\u8840\u5354\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "3131"}, {"choose": 1, "desc": "\r\u5df2\u6545\u7684\u8f2a\u6905\u4f5c\u5bb6--\u5289\u4fe0\u5973\u58eb\uff08\u7b46\u540d\u674f\u6797\u5b501942\u5e744\u670812\u65e5-2003\u5e742\u67088\u65e5\uff09\uff0c\u56e0\u8457\u4e0a\u5e1d\u7684\u547c\u53ec\u53ca\u4e00\u9846\u611b\u8eab\u5fc3\u969c\u7919\u8005\u7684\u5fc3\uff0c\u6350\u51fa\u591a\u5e74\u7a3f\u8cbb\uff0c\u548c\u516d\u4f4d\u5fd7\u540c\u9053\u5408\u7684\u670b\u53cb\uff0c\u65bc", "name": "\u8ca1\u5718\u6cd5\u4eba\u4f0a\u7538\u793e\u6703\u798f\u5229\u57fa\u91d1\u6703", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "3"}, {"choose": 1, "desc": "\r\u4ee5\u8fa6\u7406\u5152\u7ae5\u3001\u9752\u5c11\u5e74\u3001\u8eab\u5fc3\u969c\u7919\u8005\u53ca\u5bb6\u5ead\u798f\u5229\u70ba\u5b97\u65e8", "name": "\u5317\u53f0\u5317\u5bb6\u6276\u4e2d\u5fc3", "tags": ["\u5152\u7ae5\u9752\u5c11\u5e74\u798f\u5229"], "id": "6155"}, {"choose": 1, "desc": "\r\u672c\u6703\u4ee5\u7167\u9867\u672c\u5e02\u4e03\u767e\u591a\u4f4d\u8996\u969c\u76f2\u4eba\u6703\u54e1\u751f\u6d3b\u53ca\u798f\u5229\u5de5\u4f5c\u70ba\u4e3b\u8981\u5b97\u65e8\u3002\u4e26\u64d4\u4efb\u53f0\u5317\u5e02\u653f\u5e9c\u793e\u6703\u5c40\u8207\u672c\u5e02\u76f2\u80de\u4e4b\u9593\u7684\u6e9d\u901a\u6a4b\u6a11\uff1b\u5728\u653f\u7b56\u50b3\u9054\uff0c\u798f\u5229\u5de5\u4f5c\u843d\u5be6\u53ca\u63d0\u5347\u76f2\u80de\u751f\u6d3b\u7d20\u8cea\u7b49\u65b9\u9762\uff0c", "name": "\u53f0\u5317\u5e02\u76f2\u4eba\u798f\u5229\u5354\u9032\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "1337"}, {"choose": 1, "desc": "\r\u7d50\u5408\u53f0\u5317\u5e02\u95dc\u5fc3\u667a\u969c\u8005\u4eba\u58eb\uff0c\u722d\u53d6\u667a\u969c\u8005\u5408\u6cd5\u6b0a\u76ca\uff0c\u4fc3\u9032\u667a\u969c\u8005\u798f\u5229\u70ba\u5b97\u65e8\r              ", "name": "\u53f0\u5317\u5e02\u667a\u969c\u8005\u5bb6\u9577\u5354\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "1334"}, {"choose": 1, "desc": "\r1.\u63a8\u52d5\u807d\u969c\u6559\u80b2\u56de\u6b78\u4e3b\u6d41.2.\u547c\u7c72\u793e\u6703\u5c0d\u807d\u969c\u8005\u4e4b\u8a8d\u8b58\u8f14\u52a9.3.\u5354\u52a9\u653f\u5e9c\u63a8\u5c55\u807d\u969c\u8005\u53ca\u5176\u5bb6\u5ead\u5404\u9805\u670d\u52d9\u63aa\u65bd.4.\u4fc3\u9032\u570b\u5167\u5916\u6709\u95dc\u6a5f\u69cb\u76f8\u4e92\u4ea4\u6d41,\u53ca\u7d50\u5408\u793e\u6703\u71b1\u5fc3\u4eba\u58eb\u529b\u91cf,", "name": "\u53f0\u5317\u5e02\u807d\u969c\u8005\u8072\u6689\u5354\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "1333"}, {"choose": 1, "desc": "\r\u5354\u52a9\u81ea\u9589\u75c7\u8005\u7d93\u7531\u91ab\u7642,\u6559\u80b2\u53ca\u5fa9\u5065\u5f97\u4ee5\u589e\u9032\u5176\u4eba\u969b\u95dc\u4fc2,\u4fc3\u9032\u6b63\u5e38\u8a9e\u8a00\u767c\u5c55,\u5177\u5099\u793e\u6703\u5316\u751f\u6d3b\u80fd\u529b\r              ", "name": "\u53f0\u5317\u5e02\u81ea\u9589\u75c7\u5bb6\u9577\u5354\u6703", "tags": ["\u8eab\u5fc3\u969c\u7919\u798f\u5229"], "id": "1325"}, {"choose": 1, "desc": "\u7121", "name": "\u53f0\u5317\u5e02\u793e\u6703\u798f\u5229\u806f\u76df", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "23"}, {"choose": 1, "desc": "\r\u4e2d\u83ef\u9aa8\u9ad3\u79fb\u690d\u95dc\u61f7\u5354\u6703\u6210\u7acb\u65bc\u6c11\u570b\u4e03\u5341\u516d\u5e74\uff0c\u4ee5\u9aa8\u9ad3\u79fb\u690d\u624b\u8853\u91cd\u93ae\u53f0\u5317\u69ae\u7e3d\u505a\u70ba\u670d\u52d9\u57fa\u9ede\uff0c\u7d50\u5408\u75c5\u53cb\u4e4b\u529b\uff0c\u95dc\u61f7\u9aa8\u9ad3\u79fb\u690d\u4e4b\u75c5\u53cb\uff0c\u63d0\u4f9b\u5fc3\u7406\u3001\u7d93\u6fdf\u3001\u793e\u6703\u751f\u6d3b\u7b49\u5404\u5c64\u9762\u7684\u670d\u52d9\uff0c\u966a\u4f34", "name": "\u4e2d\u83ef\u9aa8\u9ad3\u79fb\u690d\u95dc\u61f7\u5354\u6703", "tags": ["\u5065\u5eb7\u91ab\u7642"], "id": "6863"}, {"choose": 1, "desc": "\r\u63a8\u52d5\u9752\u5e74\u5fd7\u5de5\u670d\u52d9\uff0c\u589e\u9032\u4eba\u7fa4\u548c\u8ae7\uff0c\u4fc3\u9032\u4e16\u754c\u548c\u5e73\u8207\u767c\u5c55\uff0c\u767c\u63ee\u9752\u6625\u7684\u611b\u8207\u95dc\u61f7\uff0c\u589e\u9032\u793e\u6703\u7684\u6d3b\u529b\u8207\u6210\u9577\uff0c\u7528\u9752\u6625\u6d3b\u529b\u95dc\u5fc3\u793e\u6703\u3001\u95dc\u611b\u751f\u547d\u3001\u6210\u9577\u81ea\u6211\u4e26\u958b\u95ca\u8996\u91ce\u638c\u63e1\u672a\u4f86\u3002", "name": "\u8ca1\u5718\u6cd5\u4eba\u9752\u5e74\u548c\u5e73\u5718", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "4970"}, {"choose": 1, "desc": "\u4e00\u3001\u767c\u63da\u4eba\u985e\u81ea\u52a9\u4e92\u52a9\u4e4b\u7f8e\u5fb7\u3002\u4e8c\u3001\u7d50\u5408\u6c11\u9593\u8207\u653f\u5e9c\u76f8\u95dc\u8cc7\u6e90\u3002\u4e09\u3001\u5f9e\u4e8b\u6709\u95dc\u56e0\u61c9\u9ad8\u9f61\u5316\u793e\u6703\u4e4b\u5b78\u8853\u7814\u7a76\u8207\u5be6\u52d9\u63a8\u5c55\u3002\u56db\u3001\u5c0d\u653f\u5e9c\u90e8\u9580\u76f8\u95dc\u653f\u7b56\u8207\u5be6\u52d9\u63a8\u5c55\u3002\u4e94\u3001\u71df\u9020\u5b89\u548c\u6a02\u5229\u4e4b\u9ad8\u9f61", "name": "\u8ca1\u5718\u6cd5\u4eba\u8001\u4e94\u8001\u57fa\u91d1\u6703", "tags": ["\u8001\u4eba\u798f\u5229"], "id": "4912"}, {"choose": 1, "desc": "\r\u4ee5\u5354\u52a9\u55ae\u89aa\u5bb6\u5ead\u5152\u7ae5\u554f\u984c\u800c\u51fa\u767c,\u91dd\u5c0d\u55ae\u89aa\u5152\u7ae5\u672c\u8eab,\u55ae\u89aa\u5bb6\u9577\u53ca\u5b78\u6821\u6559\u5e2b\u4e09\u5927\u65b9\u5411,\u5728\u5176\u81ea\u6211\u5efa\u8a2d,\u8abf\u9069,\u53ca\u8f14\u5c0e\u7684\u904e\u7a0b\u4e2d,\u63d0\u4f9b\u5fc3\u7406\u53ca\u751f\u7406\u5404\u65b9\u9762\u6700\u4f73\u7684\u8aee\u8a62\u8cc7\u8a0a\u70ba\u5b97\u65e8\r  ", "name": "\u570b\u969b\u55ae\u89aa\u5152\u7ae5\u6587\u6559\u57fa\u91d1\u6703", "tags": ["\u7d9c\u5408\u6027\u670d\u52d9"], "id": "4983"}], "name": "NPO_list"}
+{
+	"list": [{
+			"choose": 1,
+			"desc": "\r本會為依法設立，非以營利為目的之社會團體；以宣揚及保障老人之權益為主要宗旨。\r              ",
+			"name": "社團法人中華民國老人福利關懷協會",
+			"donate": [
+				"物資",
+				"捐款"
+			],
+			"type": [
+				"老人福利"
+			],
+			"id": "6981"
+		},
+		{
+			"choose": 1,
+			"desc": "\r以全方位服務為顏損及燒傷者重建環境、身體心理與社會功能，維護其尊嚴與人權。\r              ",
+			"name": "財團法人陽光社會福利基金會",
+			"donate": [
+				"物資",
+				"捐款",
+				"發票"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "4"
+		},
+		{
+			"choose": 1,
+			"desc": "\r終生教育、終生照顧‧目標（Goal） 讓所有喜憨兒 生活在社區有朋友；有工作有溫暖的家～願景（Vision） 服務全台灣之喜憨兒～ 改變社會大眾對心智障礙者之",
+			"name": "財團法人喜憨兒社會福利基金會",
+			"donate": [
+				"物資",
+				"捐款",
+				"發票"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "1549"
+		},
+		{
+			"choose": 1,
+			"desc": "\r聯合眾人用愛心關懷老人，共同推動社區照顧、弘揚孝道、不老夢想\r              ",
+			"name": "財團法人弘道老人福利基金會",
+			"donate": [
+				"物資",
+				"捐款"
+			],
+			"type": [
+				"老人福利"
+			],
+			"id": "4898"
+		},
+		{
+			"choose": 1,
+			"desc": "\r21世紀是男女須誠心合作的時代，了解彼此是為了使對方更加完美而存在。今日社會問題不單以權力或政治能解決，還需男女雙方以調和、憐恤、愛、服務和犧牲的精神一起努力",
+			"name": "世界和平婦女會台灣總會",
+			"donate": [
+				"物資",
+				"捐款",
+				"志工"
+			],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "4973"
+		},
+		{
+			"choose": 1,
+			"desc": "\r一、關懷癌症病患，鼓舞其奮鬥意志，及提供療護康復之輔導。二、提供社會大眾癌症康復資訊，預防癌症發生，促進大眾身心健康。",
+			"name": "中華國際癌病康復協會",
+			"donate": [],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "1517"
+		},
+		{
+			"choose": 1,
+			"desc": "\r推廣正確的癌症防治觀念，宣導正規癌症治療。協助癌症病人及家屬坦然適應疾病，維護良好生活品質。",
+			"name": "財團法人癌症希望基金會",
+			"donate": [
+				"捐頭髮",
+				"捐款",
+				"志工"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "3125"
+		},
+		{
+			"choose": 1,
+			"desc": "\r勵馨本著基督精神，以追求公義與愛的決心和勇氣，預防及消弭性侵害、性剝削及家庭暴力對婦女與兒少的傷害，並致力於社會改造，創造對婦女及兒少的友善環境。\r     ",
+			"name": "財團法人勵馨社會福利事業基金會",
+			"donate": [
+				"捐款"
+			],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "8"
+		},
+		{
+			"choose": 1,
+			"desc": "\r一、傳播海洋性貧血症知識，以期有效防止海洋性貧血症之發生。二、舉辦海洋性貧血症病患、家屬及關懷人士聯誼活動，並藉以交換各種 防治心得。三、協助海洋性貧血病患治",
+			"name": "台灣海洋性貧血協會",
+			"donate": [
+				"捐款"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "3131"
+		},
+		{
+			"choose": 1,
+			"desc": "\r已故的輪椅作家--劉俠女士（筆名杏林子1942年4月12日-2003年2月8日），因著上帝的呼召及一顆愛身心障礙者的心，捐出多年稿費，和六位志同道合的朋友，於",
+			"name": "財團法人伊甸社會福利基金會",
+			"donate": [
+				"物資",
+				"捐款",
+				"發票",
+				"捐紅利",
+				"志工"
+			],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "3"
+		},
+		{
+			"choose": 1,
+			"desc": "\r以辦理兒童、青少年、身心障礙者及家庭福利為宗旨",
+			"name": "北台北家扶中心",
+			"donate": [
+				"物資",
+				"捐款",
+				"志工"
+			],
+			"type": [
+				"兒童青少年福利"
+			],
+			"id": "6155"
+		},
+		{
+			"choose": 1,
+			"desc": "\r本會以照顧本市七百多位視障盲人會員生活及福利工作為主要宗旨。並擔任台北市政府社會局與本市盲胞之間的溝通橋樑；在政策傳達，福利工作落實及提升盲胞生活素質等方面，",
+			"name": "台北市盲人福利協進會",
+			"donate": [
+				"志工",
+				"捐款"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "1337"
+		},
+		{
+			"choose": 1,
+			"desc": "\r結合台北市關心智障者人士，爭取智障者合法權益，促進智障者福利為宗旨\r              ",
+			"name": "台北市智障者家長協會",
+			"donate": [
+				"物資",
+				"捐款",
+				"發票",
+				"志工"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "1334"
+		},
+		{
+			"choose": 1,
+			"desc": "\r1.推動聽障教育回歸主流.2.呼籲社會對聽障者之認識輔助.3.協助政府推展聽障者及其家庭各項服務措施.4.促進國內外有關機構相互交流,及結合社會熱心人士力量,",
+			"name": "台北市聽障者聲暉協會",
+			"donate": [
+				"志工",
+				"捐款"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "1333"
+		},
+		{
+			"choose": 1,
+			"desc": "\r協助自閉症者經由醫療,教育及復健得以增進其人際關係,促進正常語言發展,具備社會化生活能力\r              ",
+			"name": "台北市自閉症家長協會",
+			"donate": [
+				"志工",
+				"捐款"
+			],
+			"type": [
+				"身心障礙福利"
+			],
+			"id": "1325"
+		},
+		{
+			"choose": 1,
+			"desc": "無",
+			"name": "台北市社會福利聯盟",
+			"donate": [],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "23"
+		},
+		{
+			"choose": 1,
+			"desc": "\r中華骨髓移植關懷協會成立於民國七十六年，以骨髓移植手術重鎮台北榮總做為服務基點，結合病友之力，關懷骨髓移植之病友，提供心理、經濟、社會生活等各層面的服務，陪伴",
+			"name": "中華骨髓移植關懷協會",
+			"donate": [
+				"捐款"
+			],
+			"type": [
+				"健康醫療"
+			],
+			"id": "6863"
+		},
+		{
+			"choose": 1,
+			"desc": "\r推動青年志工服務，增進人群和諧，促進世界和平與發展，發揮青春的愛與關懷，增進社會的活力與成長，用青春活力關心社會、關愛生命、成長自我並開闊視野掌握未來。",
+			"name": "財團法人青年和平團",
+			"donate": [
+				"物資"
+			],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "4970"
+		},
+		{
+			"choose": 1,
+			"desc": "一、發揚人類自助互助之美德。二、結合民間與政府相關資源。三、從事有關因應高齡化社會之學術研究與實務推展。四、對政府部門相關政策與實務推展。五、營造安和樂利之高齡",
+			"name": "財團法人老五老基金會",
+			"donate": [
+				"物資",
+				"捐款",
+				"發票"
+			],
+			"type": [
+				"老人福利"
+			],
+			"id": "4912"
+		},
+		{
+			"choose": 1,
+			"desc": "\r以協助單親家庭兒童問題而出發,針對單親兒童本身,單親家長及學校教師三大方向,在其自我建設,調適,及輔導的過程中,提供心理及生理各方面最佳的諮詢資訊為宗旨\r  ",
+			"name": "國際單親兒童文教基金會",
+			"donate": [
+				"捐款"
+			],
+			"type": [
+				"綜合性服務"
+			],
+			"id": "4983"
+		}
+	],
+	"name": "NPO_list"
+}
