@@ -26,7 +26,6 @@
         margin: 0;
         padding: 0;
       }
-
       .c-rating__item {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 24px;
@@ -55,37 +54,28 @@
     <script type="text/javascript" src="asset/js/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-
         var orgID = window.location.search.substring(8);
         var orgPath = 'npo/' + orgID + '.html';
-
         $("#container").load(orgPath, function() {
-
             if ($("iframe").length > 0) {
-
                 $("<br/>").insertBefore("iframe");
                 var addr = $("iframe").parent('td').parent('tr').detach();
                 $("table").last().append(addr);
-
                 $.ajax({
                     url: "https://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + orgID,
                     type: "GET",
                     success: function(res) {
                         var json = JSON.parse(res);
-
                         // var json = [{"id":"1","org_id":"3125","name":"\u9673\u5c0f\u9f8d","star":"5","content":"\u5fd7\u5de5\u71b1\u5fc3\uff0c\u670d\u52d9\u5468\u5230","starTime":"2017-08-05 23:27:27"},{"id":"3","org_id":"3125","name":"Jackson Chen","star":"5","content":"Excellent dataset and website! Author is awesome.","starTime":"2017-08-05 23:27:24"},{"id":"5","org_id":"3125","name":"\u9673\u8000\u878d","star":"4","content":"\u6e2c\u8a66\u6e2c\u8a66\u6e2c\u8a66\u6e2c\u8a66\r\n\u8cc7\u6599\u5eabwork\r\n\u5831\u544a\u9806\u5229","starTime":"2017-08-05 23:27:20"},{"id":"6","org_id":"3125","name":"\u738b\u5c0f\u660e","star":"7","content":"\u611f\u60f3","starTime":"2017-08-05 23:27:17"},{"id":"7","org_id":"3125","name":"\u738b\u5c0f\u660e","star":"4","content":"\u611f\u60f3","starTime":"2017-08-05 23:27:13"}];
                         console.log('star');
                         console.log(json);
-
                         var tmp = '';
                         for (var i = 0; i < json.length; ++i) {
-
                             // var myid = json[i]['org_id'];
                             var name = json[i]['name'];
                             var star = json[i]['star'];
                             var content = json[i]['content'];
                             var container = '<div></div>';
-
                             var star_tmp = '';
                             for (var j = 1; j < 10; j++) {
                                 if (j <= star) {
@@ -94,30 +84,21 @@
                                     star_tmp += '<li class="c-rating__item" data-index="' + (i - 1) + '"></li>';
                                 }
                             }
-
                             tmp += '<tr><td>' +
                                 '<h4>' + name + '</h4>' +
                                 '<ul>' + star_tmp + '</ul>' +
                                 '<p>' + content + '</p>' +
                                 '</td></tr>';
                         }
-
                         var board = '<h3>留言板</h3>' +
                             '<table><tbody><tr>' + tmp +
                             '</tr></tbody></table>';
-
                         $("section").append(board);
-
                     }
                 });
-
-
             }
-
             $("table").addClass('table table-hover table-bordered');
-
         });
-
     });
     </script>
 </body>
