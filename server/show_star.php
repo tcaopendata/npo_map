@@ -1,6 +1,6 @@
 <?php
 	//require setting
-	header('Access-Control-Allow-Origin: *');  
+	header('Access-Control-Allow-Origin: *');
 
 	require('connect.php');
 	date_default_timezone_set('Asia/Taipei');
@@ -16,7 +16,7 @@
 	  while ($row = $get_sql->fetch(PDO::FETCH_ASSOC)){
 			array_push($out,$row);
 		}
-		echo json_encode($out) . "<br/>";
+		echo json_encode($out);
 	}
 	else{
 		echo '[]';
