@@ -42,8 +42,8 @@
                 $.ajax({
                     url: "https://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + orgID,
                     type: "GET",
-                    dataType: "json",
-                    success: function(json) {
+                    success: function(res) {
+                        var json = JSON.parse(res);
 
                         // var json = [{"id":"1","org_id":"3125","name":"\u9673\u5c0f\u9f8d","star":"5","content":"\u5fd7\u5de5\u71b1\u5fc3\uff0c\u670d\u52d9\u5468\u5230","starTime":"2017-08-05 23:27:27"},{"id":"3","org_id":"3125","name":"Jackson Chen","star":"5","content":"Excellent dataset and website! Author is awesome.","starTime":"2017-08-05 23:27:24"},{"id":"5","org_id":"3125","name":"\u9673\u8000\u878d","star":"4","content":"\u6e2c\u8a66\u6e2c\u8a66\u6e2c\u8a66\u6e2c\u8a66\r\n\u8cc7\u6599\u5eabwork\r\n\u5831\u544a\u9806\u5229","starTime":"2017-08-05 23:27:20"},{"id":"6","org_id":"3125","name":"\u738b\u5c0f\u660e","star":"7","content":"\u611f\u60f3","starTime":"2017-08-05 23:27:17"},{"id":"7","org_id":"3125","name":"\u738b\u5c0f\u660e","star":"4","content":"\u611f\u60f3","starTime":"2017-08-05 23:27:13"}];
                         console.log('star');
