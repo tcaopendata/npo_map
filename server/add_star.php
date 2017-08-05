@@ -3,20 +3,19 @@
 	require('connect.php');
 	date_default_timezone_set('Asia/Taipei');
 
-	if(isset($_GET['id']) && isset($_GET['org_id']) && isset($_GET['star']) && isset($_GET['content']) && isset($_GET['time'])){
+	if(isset($_GET['org_id']) && isset($_GET['star']) && isset($_GET['content']) && isset($_GET['name'])){
 		$org_id = $_GET['org_id'];
-		$out = [];
+		$star = $_GET['star'];
+		$content = $_GET['content'];
+		$name = $_GET['name'];
 
-		$sql = 'SELECT * FROM star_record WHERE org_id=:org_id';
+		$sql = "INSERT INTO star_record (id, org_id, name, star, content, starTime) VALUES (NULL, :org_id, :name, :star, :content, NULL)";
+		$insert_sql = $db->prepare($sql);
+		$insert_sql->execute(array(':org_id'=>$org_id,':name'=>$name,':star'=>$star,':content'=>$content));
 
-		$get_sql = $db->prepare($sql, array(PDO::FETCH_ASSOC));
-	  $get_sql->execute(array(':org_id'=>$org_id));
-	  while ($row = $get_sql->fetch(PDO::FETCH_ASSOC)){
-			array_push($out,$row);
-		}
-		echo json_encode($out) . "<br/>";
+		echo "success";
 	}
 	else{
-		echo '[]';
+		echo 'fail';
 	}
 ?>

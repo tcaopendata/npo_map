@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>star</title>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="css/rating.css">
+		<style media="screen">
+			body,input{
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		組織ID：<input type="text" id="org_id" name="org_id" value="3152"><br/>
+		姓名：<input type="text" id="name" name="name" value="王小明"><br/>
+		內容：<input type="textarea" id="content" name="content" value="感想">
+		<div id="el"></div>
+		<span id="now">0</span> / 10 顆星<br/>
+		<button type="button" name="button" onclick="submit()">Submit</button>
+
+
+		<script src="js/dict/rating.min.js"></script>
+		<script type="text/javascript">
+			// target element
+			//var el = document.querySelector('#el');
+			var el = document.getElementById('el');
+
+			// current rating, or initial rating
+			var currentRating = 0;
+
+			// max rating, i.e. number of stars you want
+			var maxRating= 10;
+
+			// callback to run after setting the rating
+			var callback = function(rating) { alert(rating); };
+
+			// rating instance
+			var myRating = rating(el, currentRating, maxRating, callback);
+
+			myRating.setRating(0,false);
+
+			function submit(){
+				var org_id = document.getElementById('org_id').value;
+				var name = document.getElementById('name').value;
+				var content = document.getElementById('content').value;
+				var star = myRating.getRating();
+
+				//console.log(org_id + "," + name + "," + content + "," + star);
+				$.ajax({
+					url: "add_star.php",
+					type: "get",
+					data: {
+						org_id:		org_id,
+						name: 		name,
+						content:	content,
+						star:			star
+					},
+					success:function(res){
+						if(res == 'success'){
+							alert('Add comment success!');
+						}
+						else{
+							alert('Add comment fail!');
+						}
+					}
+				});
+			}
+		</script>
+
+
+		<script type="text/javascript">
+			$.ajax({
+				url:'http://www.bringoo.com.tw/npo_map/show_star.php?org_id=3',
+				type: "get",
+				success(res){
+					console.log(res);
+				}
+			});
+		</script>
+	</body>
+</html>
