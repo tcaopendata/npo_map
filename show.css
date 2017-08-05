@@ -1,0 +1,36 @@
+html,body{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-family: "微軟正黑體";
+}
+.block{
+	width: 98%;
+	border: 1px black solid;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 5px;
+}
+.name{
+	text-decoration: bold;
+	font-size: 30px;
+}
+.desc{
+	font-size: 20px;
+}
+#menu{
+	height: 1500px;
+	width: 20%;
+	background-color: rgba(0,0,0,0.1);
+	float: left;
+}
+#out{
+	height: 1500px;
+	width: 70%;
+	float: left;
+}
+.tags{
+	
+}

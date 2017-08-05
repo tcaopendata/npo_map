@@ -5,15 +5,28 @@
 	<meta charset="utf-8">
 	<title>Show</title>
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="show.css">
 </head>
 
 <body>
+	<div id="menu"></div>
 	<div id="out"></div>
 
 	<script type="text/javascript">
-		$.getJSON("npo_list.json",json);
-		console.log(json);
-		document.getElementById('out').innerHTML = json;
+		$.ajax({
+			url: "http://www.bringoo.com.tw/npo_map/show_npo.php",
+			type: "GET",
+			dataType: "json",
+			success: function(json) {
+				var i;
+				for(i = 0;i < json['list'].length;++i){
+					console.log(json['list'][i]['name']);
+					var name = json['list'][i]['name'];
+					var desc = json['list'][i]['desc'];
+					$("#out").append('<div class="block"><div class="name">' + name + '</div><div class="desc">' + desc + '</div></div>');
+				}
+			}
+		});
 	</script>
 </body>
 
