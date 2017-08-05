@@ -35,7 +35,7 @@
 
 			for($j = 0;$j < count($data['list'][$i]['donate']);++$j){
 				//echo "—" . $data['list'][$i]['type'][$j] . "<br/>";
-				if($data['list'][$i]['donate'][$j] == $type)$ctr = 1;
+				if($data['list'][$i]['donate'][$j] == $donate)$ctr = 1;
 			}
 
 			if($ctr == 0){
