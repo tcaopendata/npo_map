@@ -1,5 +1,7 @@
 <?php
 	//get json file
+	header('Access-Control-Allow-Origin: *');
+	
 	$json = file_get_contents("npo_list.json");
 	$data = json_decode($json, true);
 

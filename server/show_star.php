@@ -1,5 +1,7 @@
 <?php
 	//require setting
+	header('Access-Control-Allow-Origin: *');  
+
 	require('connect.php');
 	date_default_timezone_set('Asia/Taipei');
 
