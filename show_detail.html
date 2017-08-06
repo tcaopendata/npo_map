@@ -1,435 +1,208 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NGO channel | Detail</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="asset/js/bootstrap/css/bootstrap.min.css" />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>NGO channel | Detail</title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="asset/js/bootstrap/css/bootstrap.min.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="asset/css/npo.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="server/css/rating.css" /> -->
-    <style media="screen">
-      .c-rating {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        list-style: none !important;
-        margin: 0;
-        padding: 0;
-      }
-      .c-rating__item {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 24px;
-            -ms-flex: 0 0 24px;
-                flex: 0 0 24px;
-        height: 24px;
-        background: url("server/img/stars.svg");
-        background-position: 0 0;
-        cursor: pointer;
-        list-style: none;
-        display: inline-block;
-        width: 24px;
-      }
-      .c-rating__item.is-active {
-        background-position: -24px 0;
-      }
-    </style>
+		<link rel="stylesheet" type="text/css" href="asset/css/npo.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="server/css/rating.css" /> -->
+		<style media="screen">
+				.c-rating {
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -ms-flexbox;
+						display: flex;
+						list-style: none !important;
+						margin: 0;
+						padding: 0;
+				}
+
+				.c-rating__item {
+						-webkit-box-flex: 0;
+						-webkit-flex: 0 0 24px;
+						-ms-flex: 0 0 24px;
+						flex: 0 0 24px;
+						height: 24px;
+						background: url("server/img/stars.svg");
+						background-position: 0 0;
+						cursor: pointer;
+						list-style: none;
+						display: inline-block;
+						width: 24px;
+				}
+
+				.c-rating__item.is-active {
+						background-position: -24px 0;
+				}
+		</style>
 </head>
 
 <body>
-    <div id="container" class="container-fluid">
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script type="text/javascript" src="asset/js/bootstrap/js/jquery-2.1.4.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="asset/js/bootstrap/js/bootstrap.min.js"></script>
-    <script src="server/js/dict/rating.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $.orgID = window.location.search.substring(8);
-        var orgPath = 'npo/' + $.orgID + '.html';
-        $('.form-horizontal').submit(function() {
-            return false;
-        });
-        $("#container").load(orgPath, function() {
-            if ($("iframe").length > 0) {
-                $("<br/>").insertBefore("iframe");
-                var addr = $("iframe").parent('td').parent('tr').detach();
-                $("table").last().append(addr);
-                $.ajax({
-                    url: "https://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + $.orgID,
-                    type: "GET",
-                    dataType: "json",
-                    success: function(json) {
-                        console.log('star');
-                        console.log(json);
-                        var tmp = '';
-                        for (var i = 0; i < json.length; ++i) {
-                            // var myid = json[i]['org_id'];
-                            var name = json[i]['name'];
-                            var star = json[i]['star'];
-                            var content = json[i]['content'];
-                            var container = '<div></div>';
-                            var star_tmp = '';
-                            for (var j = 1; j <= 10; j++) {
-                                if (j <= star) {
-                                    star_tmp += '<li class="c-rating__item is-active" data-index="' + (j - 1) + '"></li>';
-                                } else {
-                                    star_tmp += '<li class="c-rating__item" data-index="' + (j - 1) + '"></li>';
-                                }
-                            }
-                            tmp += '<tr><td>' +
-                                '<h4>' + name + '</h4>' +
-                                '<ul>' + star_tmp + '</ul>' +
-                                '<p>' + content + '</p>' +
-                                '</td></tr>';
-                        }
-                        var board = '<h3>留言板</h3>' +
-                            '<table id="board">' +
-                            '<tbody>' +
-                            '<tr>' + returnLeave() + '</tr>' +
-                            '<tr>' + tmp + '</tr>' +
-                            '</tbody></table>';
-                        $("section").append(board);
-                        $("table").addClass('table table-hover table-bordered');
-                        init();
-                    }
-                });
-            }
-            $("table").addClass('table table-hover table-bordered');
-        });
-    });
-    function returnLeave() {
-        var leave = '<td><div class="form-horizontal">' +
-            '<input type="hidden" id="org_id" name="org_id" value="' + $.orgID + '">' +
-            '<div class="form-group">' +
-            '<label for="name" class="col-sm-2 control-label">姓名</label>' +
-            '<div class="col-sm-10">' +
-            '<input type="text" class="form-control"  id="name" name="name" value="王小明" placeholder="姓名">' +
-            '</div>' +
-            '</div>' +
-            '<div class="form-group">' +
-            '<label for="content" class="col-sm-2 control-label">留言</label>' +
-            '<div class="col-sm-10">' +
-            '<input type="textarea" class="form-control" id="content" name="content" value="感想" placeholder="留言">' +
-            '</div>' +
-            '</div>' +
-            '<div class="form-group">' +
-            '<label for="content" class="col-sm-2 control-label"> </label>' +
-            '<div class="col-sm-10">' +
-            '<div id="el"></div>' +
-            '<span id="now">0</span> / 10 顆星<br/>' +
-            '</div>' +
-            '</div>' +
-            '<div class="form-group">' +
-            '<div class="col-sm-offset-2 col-sm-10">' +
-            '<button type="button" class="btn btn-default" name="button" onclick="submit();">送出</button>' +
-            '</div>' +
-            '</div>' +
-            '</div></td>';
-        return leave;
-    }
-    function init() {
-        // target element
-        //var el = document.querySelector('#el');
-        var el = document.getElementById('el');
-        // current rating, or initial rating
-        var currentRating = 0;
-        // max rating, i.e. number of stars you want
-        var maxRating = 10;
-        // callback to run after setting the rating
-        var callback = function(rating) { alert(rating); };
-        // rating instance
-        $.myRating = rating(el, currentRating, maxRating, callback);
-        $.myRating.setRating(0, false);
-    }
-    function submit() {
-        var org_id = document.getElementById('org_id').value;
-        var name = document.getElementById('name').value;
-        var content = document.getElementById('content').value;
-        var star = $.myRating.getRating();
-        console.log(org_id + "," + name + "," + content + "," + star);
-        $.ajax({
-            url: "https://www.bringoo.com.tw/npo_map/add_star.php",
-            type: "get",
-            data: {
-                org_id: org_id,
-                name: name,
-                content: content,
-                star: star
-            },
-            success: function(res) {
-                if (res == 'success') {
-                    alert('Add comment success!');
+		<div id="container" class="container-fluid">
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type="text/javascript" src="asset/js/bootstrap/js/jquery-2.1.4.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script type="text/javascript" src="asset/js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="server/js/dict/rating.min.js"></script>
+		<script type="text/javascript">
+				$(document).ready(function() {
+						$.orgID = window.location.search.substring(8);
+						var orgPath = 'npo/' + $.orgID + '.html';
+						$('.form-horizontal').submit(function() {
+								return false;
+						});
+						$("#container").load(orgPath, function() {
+								if ($("iframe").length > 0) {
+										$("<br/>").insertBefore("iframe");
+										var addr = $("iframe").parent('td').parent('tr').detach();
+										$("table").last().append(addr);
+										$.ajax({
+												url: "https://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + $.orgID,
+												type: "GET",
+												dataType: "json",
+												success: function(json) {
+														console.log('star');
+														console.log(json);
+														var tmp = '';
+														for (var i = 0; i < json.length; ++i) {
+																// var myid = json[i]['org_id'];
+																var name = json[i]['name'];
+																var star = json[i]['star'];
+																var content = json[i]['content'];
+																var container = '<div></div>';
+																var star_tmp = '';
+																for (var j = 1; j <= 10; j++) {
+																		if (j <= star) {
+																				star_tmp += '<li class="c-rating__item is-active" data-index="' + (j - 1) + '"></li>';
+																		} else {
+																				star_tmp += '<li class="c-rating__item" data-index="' + (j - 1) + '"></li>';
+																		}
+																}
+																tmp += '<tr><td>' +
+																		'<h4>' + name + '</h4>' +
+																		'<ul>' + star_tmp + '</ul>' +
+																		'<p>' + content + '</p>' +
+																		'</td></tr>';
+														}
+														var board = '<h3>留言板</h3>' +
+																'<table id="board">' +
+																'<tbody>' +
+																'<tr>' + returnLeave() + '</tr>' +
+																'<tr>' + tmp + '</tr>' +
+																'</tbody></table>';
+														$("section").append(board);
+														$("table").addClass('table table-hover table-bordered');
+														init();
+												}
+										});
+								}
+								$("table").addClass('table table-hover table-bordered');
+						});
+				});
 
-                    // append new message
-                    var star_tmp = '';
-                    for (var j = 1; j <= 10; j++) {
-                          if (j <= star) {
-                               star_tmp += '<li class="c-rating__item is-active" data-index="' + (j - 1) + '"></li>';
-                          } else {
-                               star_tmp += '<li class="c-rating__item" data-index="' + (j - 1) + '"></li>';
-                          }
-                    }
+				function returnLeave() {
+						var leave = '<td><div class="form-horizontal">' +
+								'<input type="hidden" id="org_id" name="org_id" value="' + $.orgID + '">' +
+								'<div class="form-group">' +
+								'<label for="name" class="col-sm-2 control-label">姓名</label>' +
+								'<div class="col-sm-10">' +
+								'<input type="text" class="form-control"  id="name" name="name" value="王小明" placeholder="姓名">' +
+								'</div>' +
+								'</div>' +
+								'<div class="form-group">' +
+								'<label for="content" class="col-sm-2 control-label">留言</label>' +
+								'<div class="col-sm-10">' +
+								'<input type="textarea" class="form-control" id="content" name="content" value="感想" placeholder="留言">' +
+								'</div>' +
+								'</div>' +
+								'<div class="form-group">' +
+								'<label for="content" class="col-sm-2 control-label"> </label>' +
+								'<div class="col-sm-10">' +
+								'<div id="el"></div>' +
+								'<span id="now">0</span> / 10 顆星<br/>' +
+								'</div>' +
+								'</div>' +
+								'<div class="form-group">' +
+								'<div class="col-sm-offset-2 col-sm-10">' +
+								'<button type="button" class="btn btn-default" name="button" onclick="submit();">送出</button>' +
+								'</div>' +
+								'</div>' +
+								'</div></td>';
+						return leave;
+				}
 
-                    var tmp = '<tr><td>' +
-                                '<h4>' + name + '</h4>' +
-                                '<ul>' + star_tmp + '</ul>' +
-                                '<p>' + content + '</p>' +
-                                '</td></tr>';
+				function init() {
+						// target element
+						//var el = document.querySelector('#el');
+						var el = document.getElementById('el');
+						// current rating, or initial rating
+						var currentRating = 0;
+						// max rating, i.e. number of stars you want
+						var maxRating = 10;
+						// callback to run after setting the rating
+						var callback = function(rating) {
+								alert(rating);
+						};
+						// rating instance
+						$.myRating = rating(el, currentRating, maxRating, callback);
+						$.myRating.setRating(0, false);
+				}
 
-                    $("#board").append(tmp);
+				function submit() {
+						var org_id = document.getElementById('org_id').value;
+						var name = document.getElementById('name').value;
+						var content = document.getElementById('content').value;
+						var star = $.myRating.getRating();
+						console.log(org_id + "," + name + "," + content + "," + star);
+						$.ajax({
+								url: "https://www.bringoo.com.tw/npo_map/add_star.php",
+								type: "get",
+								data: {
+										org_id: org_id,
+										name: name,
+										content: content,
+										star: star
+								},
+								success: function(res) {
+										if (res == 'success') {
+												alert('Add comment success!');
 
-                } else {
-                    alert('Add comment fail!');
-                }
-            }
-        });
-    }
-    </script>
+												// append new message
+												var star_tmp = '';
+												for (var j = 1; j <= 10; j++) {
+														if (j <= star) {
+																star_tmp += '<li class="c-rating__item is-active" data-index="' + (j - 1) + '"></li>';
+														} else {
+																star_tmp += '<li class="c-rating__item" data-index="' + (j - 1) + '"></li>';
+														}
+												}
+
+												var tmp = '<tr><td>' +
+														'<h4>' + name + '</h4>' +
+														'<ul>' + star_tmp + '</ul>' +
+														'<p>' + content + '</p>' +
+														'</td></tr>';
+
+												$("#board").append(tmp);
+
+										} else {
+												alert('Add comment fail!');
+										}
+								}
+						});
+				}
+		</script>
 </body>
 
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NGO channel | Detail</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="asset/js/bootstrap/css/bootstrap.min.css" />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="asset/css/npo.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="server/css/rating.css" /> -->
-    <style media="screen">
-      .c-rating {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        list-style: none !important;
-        margin: 0;
-        padding: 0;
-      }
-      .c-rating__item {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 24px;
-            -ms-flex: 0 0 24px;
-                flex: 0 0 24px;
-        height: 24px;
-        background: url("server/img/stars.svg");
-        background-position: 0 0;
-        cursor: pointer;
-        list-style: none;
-        display: inline-block;
-        width: 24px;
-      }
-      .c-rating__item.is-active {
-        background-position: -24px 0;
-      }
-    </style>
-</head>
-
-<body>
-    <div id="container" class="container-fluid">
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script type="text/javascript" src="asset/js/bootstrap/js/jquery-2.1.4.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="asset/js/bootstrap/js/bootstrap.min.js"></script>
-    <script src="server/js/dict/rating.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-
-        $.orgID = window.location.search.substring(8);
-        var orgPath = 'npo/' + $.orgID + '.html';
-
-        $('.form-horizontal').submit(function() {
-            return false;
-        });
-
-        $("#container").load(orgPath, function() {
-
-            if ($("iframe").length > 0) {
-
-                $("<br/>").insertBefore("iframe");
-                var addr = $("iframe").parent('td').parent('tr').detach();
-                $("table").last().append(addr);
-
-                $.ajax({
-                    url: "https://www.bringoo.com.tw/npo_map/show_star.php?org_id=" + $.orgID,
-                    type: "GET",
-                    dataType: "json",
-                    success: function(json) {
-
-                        console.log('star');
-                        console.log(json);
-
-                        var tmp = '';
-                        for (var i = 0; i < json.length; ++i) {
-
-                            // var myid = json[i]['org_id'];
-                            var name = json[i]['name'];
-                            var star = json[i]['star'];
-                            var content = json[i]['content'];
-                            var container = '<div></div>';
-
-                            var star_tmp = '';
-                            for (var j = 1; j <= 10; j++) {
-                                if (j <= star) {
-                                    star_tmp += '<li class="c-rating__item is-active" data-index="' + (j - 1) + '"></li>';
-                                } else {
-                                    star_tmp += '<li class="c-rating__item" data-index="' + (j - 1) + '"></li>';
-                                }
-                            }
-
-                            tmp += '<tr><td>' +
-                                '<h4>' + name + '</h4>' +
-                                '<ul>' + star_tmp + '</ul>' +
-                                '<p>' + content + '</p>' +
-                                '</td></tr>';
-                        }
-
-                        var board = '<h3>留言板</h3>' +
-                            '<table id="board">' +
-                            '<tbody>' +
-                            '<tr>' + returnLeave() + '</tr>' +
-                            '<tr>' + tmp + '</tr>' +
-                            '</tbody></table>';
-
-
-                        $("section").append(board);
-                        $("table").addClass('table table-hover table-bordered');
-
-                        init();
-
-                    }
-                });
-
-
-            }
-
-            $("table").addClass('table table-hover table-bordered');
-
-        });
-
-    });
-
-    function returnLeave() {
-
-        var leave = '<td><div class="form-horizontal">' +
-            '<input type="hidden" id="org_id" name="org_id" value="' + $.orgID + '">' +
-            '<div class="form-group">' +
-            '<label for="name" class="col-sm-2 control-label">姓名</label>' +
-            '<div class="col-sm-10">' +
-            '<input type="text" class="form-control"  id="name" name="name" value="王小明" placeholder="姓名">' +
-            '</div>' +
-            '</div>' +
-            '<div class="form-group">' +
-            '<label for="content" class="col-sm-2 control-label">留言</label>' +
-            '<div class="col-sm-10">' +
-            '<input type="textarea" class="form-control" id="content" name="content" value="感想" placeholder="留言">' +
-            '</div>' +
-            '</div>' +
-            '<div class="form-group">' +
-            '<label for="content" class="col-sm-2 control-label"> </label>' +
-            '<div class="col-sm-10">' +
-            '<div id="el"></div>' +
-            '<span id="now">0</span> / 10 顆星<br/>' +
-            '</div>' +
-            '</div>' +
-            '<div class="form-group">' +
-            '<div class="col-sm-offset-2 col-sm-10">' +
-            '<button type="button" class="btn btn-default" name="button" onclick="submit();">送出</button>' +
-            '</div>' +
-            '</div>' +
-            '</div></td>';
-
-        return leave;
-    }
-
-
-    function init() {
-        // target element
-        //var el = document.querySelector('#el');
-        var el = document.getElementById('el');
-        // current rating, or initial rating
-        var currentRating = 0;
-        // max rating, i.e. number of stars you want
-        var maxRating = 10;
-        // callback to run after setting the rating
-        var callback = function(rating) { alert(rating); };
-        // rating instance
-        $.myRating = rating(el, currentRating, maxRating, callback);
-        $.myRating.setRating(0, false);
-    }
-
-    function submit() {
-
-        var org_id = document.getElementById('org_id').value;
-        var name = document.getElementById('name').value;
-        var content = document.getElementById('content').value;
-        var star = $.myRating.getRating();
-
-        console.log(org_id + "," + name + "," + content + "," + star);
-        $.ajax({
-            url: "https://www.bringoo.com.tw/npo_map/add_star.php",
-            type: "get",
-            data: {
-                org_id: org_id,
-                name: name,
-                content: content,
-                star: star
-            },
-            success: function(res) {
-                if (res == 'success') {
-                    alert('Add comment success!');
-                    
-                    // append new message
-                    var star_tmp = '';
-                    for (var j = 1; j <= 10; j++) {
-                          if (j <= star) {
-                               star_tmp += '<li class="c-rating__item is-active" data-index="' + (j - 1) + '"></li>';
-                          } else {
-                               star_tmp += '<li class="c-rating__item" data-index="' + (j - 1) + '"></li>';
-                          }
-                    }
-                    
-                    var tmp = '<tr><td>' +
-                                '<h4>' + name + '</h4>' +
-                                '<ul>' + star_tmp + '</ul>' +
-                                '<p>' + content + '</p>' +
-                                '</td></tr>';
-                    
-                    $("#board").append(tmp);
-                    
-                } else {
-                    alert('Add comment fail!');
-                }
-            }
-        });
-
-    }
-    </script>
-</body>
-
-</html>
->>>>>>> dbef5e005188b3b05d446e7ab26cbb1ed71ed0c2
