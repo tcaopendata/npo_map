@@ -252,6 +252,15 @@
 
                     }
 
+                    //
+                    $.ajax({
+                      url: "https://www.bringoo.com.tw/npo_map/show_star_avg.php?org_id=" + json['list'][i]['id'],
+                      type: 'get',
+                      success: function(res){
+                        console.log(res);
+                      }
+                    });
+
                 }
 
                 $(id).html(tmp);
