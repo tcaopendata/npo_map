@@ -122,7 +122,7 @@
     <script type="text/javascript">
     $(document).ready(function() {
 
-        $(document).on('click', '.panel-default', function(event) {
+        $(document).on('click', '.panel-heading', function(event) {
             var id = $(this).attr('data-ref');
             window.location = 'show_detail.html?org_id=' + id;
         });
@@ -226,7 +226,7 @@
                         var desc = json['list'][i]['desc'];
 
                         tmp += '<div class="panel panel-default" data-ref="' + myid + '">' +
-                            '<div class="panel-heading">' +
+                            '<div class="panel-heading" data-ref="' + myid + '">' +
                             '<h3 class="panel-title">' + name + '</h3>' +
                             '</div>' +
                             '<div class="panel-body">' +
@@ -244,9 +244,8 @@
                                 color = 'label-primary';
                             }
 
-                            // if(tag_arr[j] != '捐款')tags += '<span class="label ' +color+ '">' +tag_arr[j]+ '</span>&nbsp;';
-                            // else tags += '<a style="text-decoration:none;" href="#" data-toggle="popover" title="郵政劃撥" data-content="帳號：50191500　戶名：財團法人癌症希望基金會">' + '<span class="label ' +color+ '">' +tag_arr[j]+ '</span>&nbsp;' + '</a>';
-                            tags += '<a style="text-decoration:none;" href="#" data-toggle="popover" title="郵政劃撥" data-content="帳號：50191500　戶名：' + name + '">' + '<span class="label ' +color+ '">' +tag_arr[j]+ '</span>&nbsp;' + '</a>';
+                            if(tag_arr[j] != '捐款')tags += '<span class="label ' +color+ '">' +tag_arr[j]+ '</span>&nbsp;';
+                            else tags += '<a style="text-decoration:none;" href="#" data-toggle="popover" title="郵政劃撥" data-content="帳號：50191500　戶名：' + name + '">' + '<span class="label ' +color+ '">' +tag_arr[j]+ '</span>&nbsp;' + '</a>';
                         }
 
                         tmp += tags+'</div></div><hr />';
