@@ -122,11 +122,9 @@
     <script type="text/javascript">
     $(document).ready(function() {
 
-        $(document).on('click', '.panel-heading', function(event) {
-
+        $(document).on('click', '.panel-default', function(event) {
             var id = $(this).attr('data-ref');
             window.location = 'show_detail.html?org_id=' + id;
-
         });
 
 
